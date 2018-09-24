@@ -49,7 +49,7 @@ document.getElementById('partFive').innerHTML = myHtml;
 var part6Number = getRandomNumber();
 var part6Result = "Below or equal to 50";
 if(part6Number > 50) {
-  part6Result = "Above 50"
+  part6Result = "Above 50";
 }
 
 document.getElementById('part6Number').innerHTML = part6Number;
@@ -83,7 +83,7 @@ for(var i = 0; i <= 10; i++){
     console.log(numberArray[i]);
 }
 
-document.getElementById('bonus').style.backgroundColor = "blue";
+document.getElementsByClassName("bonus")[0].style.backgroundColor = 'blue';
 
 
 ////////////////////////////////////////////////////////////////
