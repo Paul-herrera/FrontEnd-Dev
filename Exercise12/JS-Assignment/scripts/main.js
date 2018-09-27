@@ -40,7 +40,7 @@ var user = {
 };
 	
     //log the user object to the console
-console.log(user);
+console.log(user); //cant get this to work properly!?!?
 
     //Check to see if everything is valid
 if (message.length <=0){
