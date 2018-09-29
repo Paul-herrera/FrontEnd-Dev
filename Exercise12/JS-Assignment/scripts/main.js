@@ -30,9 +30,9 @@ for( var i = 0; i < message.length; i++) {
 
     //Create javascript object for the user
 var user = {
-	firstName: getElm('firstName'),
-	lastName: getElm('lastName'),
-	email: getElm('emailAddress'),
+	firstName: getValue('firstName'),
+	lastName: getValue('lastName'),
+	email: getValue('emailAddress'),
 	fullname: function(){
 		var field = this;
 		return field.firstName + " " + field.lastName;
@@ -40,7 +40,7 @@ var user = {
 };
 	
     //log the user object to the console
-console.log(user); //cant get this to work properly!?!?
+console.log(user);
 
     //Check to see if everything is valid
 if (message.length <=0){
