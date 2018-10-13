@@ -1,0 +1,46 @@
+body{
+    width:80%;
+    margin:0 auto;
+}
+
+.controls{
+    text-align:center;
+    margin:10px;
+}
+#content{
+    padding:20px;
+}
+.blue{
+    border: 1px solid #2121FE;
+    background: rgba(76, 76, 251,.4);
+}
+.blue h1,
+.blue p,
+.blue ul{
+    color:#010196;
+}
+
+.theme{
+    font-family: 'Open Sans', sans-serif;
+    overflow:hidden;
+}
+.theme h1{
+    text-align:center;
+}
+
+.theme p{
+    float:left;
+    padding:10px;
+    width:40%;
+}
+
+.theme ul{
+    list-style:square;
+    font-size:20px;
+    float:right;
+    width:40%;
+}
+
+.theme ul li{
+    margin:10px;
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Assignment 14</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <section id="message">
+
+        </section>
+        <main class="inputs">
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" name="userName" value="" placeholder=" User Name" required/>
+            <label for="eMail"> Email</label>
+            <input type="email" id="eMail" name="email" value="" placeholder="Email Address" required/>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" required/>
+            <label for="timeZone">Time Zone</label>
+            <select id="timeZone">
+                <option value="1"></option>
+                <option value="2">Eastern</option>
+                <option value="3">Central</option>
+                <option value="4">Mountain</option>
+                <option value="5">Pacific</option>
+            </select>
+            <input type="radio" value="Accept Terms and Conditions" id="terms" required/>
+            <label for="terms">Accept Terms and Conditions</label>
+            <button type="button" id="submit">
+                Submit
+            </button>
+            <button type="button" id="reset">
+                Reset
+            </button>
+        </main>
+        
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
