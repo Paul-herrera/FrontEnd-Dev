@@ -1,62 +1,3 @@
-document.getElementById('submit').addEventListener("click", submitted(){
-    
-});
-
-document.getElementById('reset').addEventListener("click", reset(){
-    
-});
-
-
-
-function update() {
-        //Create new array.
-    var message = [];
-    if (!getValue('userName')) {
-	    message.push("First Name is required");
-    }
-    if (!getValue(eMail.indexOf('@') > -1)) {
-	    message.push("Email is required");
-    }
-    if (!getValue('password')) {
-	    message.push("password is required");
-    }
-
-    
-
-    if (!getValue(''))
-        //Loop through array
-    var htmlString = "";
-    for( var i = 0; i < message.length; i++) {
-	    htmlString = htmlString + '<p>' + message[i] + '</p>';
-    }
-	    getElm("message").innerHTML = htmlString;
-
-        //Create javascript object for the user
-    /*var user = {
-	    firstName: getValue('firstName'),
-	    lastName: getValue('lastName'),
-	    email: getValue('emailAddress'),
-	    fullname: function(){
-		    var field = this;
-		    return field.firstName + " " + field.lastName;
-	    }
-    };
-        //log the user object to the console
-    console.log(user);*/
-
-        //Check to see if everything is valid
-    if (message.length <=0){
-        //Create string for today's date. Remember, if you hard code this, it will be invalid tomorrow.
-	    var submittedDate = new Date().toDateString();
-        //Make the alert box.
-	    window.alert("Submitted on " + submittedDate);
-    }
-
-}
-
-var btn = document.getElementById('btnUpdate');
-btn.addEventListener('click', update);
-
 function getValue(id) {
     return getElm(id).value;
 }
@@ -64,3 +5,85 @@ function getValue(id) {
 function getElm(id) {
     return document.getElementById(id);
 }
+
+getElm('submit').addEventListener("click", function(){
+    var message = [];
+
+    if (!getValue('userName')) {
+        message.push("First Name is required");
+        getElm('userName').classList.add("invalid");
+    } else {
+        getElm('userName').classList.remove("invalid");
+    }
+
+    if (!getValue('eMail')) {
+        message.push("Email Address is required");
+        getElm('eMail').classList.add("invalid");
+    } else {
+        getElm('eMail').classList.remove("invalid");
+    }
+
+    if (getValue('eMail').indexOf('@') == -1) {
+        message.push("Enter a valid Email");
+        getElm('eMail').classList.add("invalid");
+    } else {
+        getElm('eMail').classList.remove("invalid");
+    }
+
+    if (!getValue('password')) {
+        message.push("Password is required");
+        getElm('password').classList.add("invalid");
+    } else {
+        getElm('password').classList.remove("invalid");
+    }
+
+    if (!getValue('timeZone') > 0) {
+        message.push('Timezone is required');
+        getElm('timeZone').classList.add("invalid");
+    } else {
+        getElm('timeZone').classList.remove("invalid");
+    }
+
+    if (!getElm('terms').checked ) {
+        message.push('You must accept the terms and conditions');
+    } 
+    
+    var htmlString = "";
+
+    for( var i = 0; i < message.length; i++) {
+	    htmlString = htmlString + '<li>' + message[i] + '</li>';
+    }
+
+    if (!message.length > 0) {
+        htmlString = '<h1>Thank you for registering</h1>';
+    }
+
+    getElm("message").innerHTML = htmlString;
+        
+});
+
+getElm('reset').addEventListener("click", function(){
+    
+    getElm('userName').value = '';
+
+    getElm('userName').classList.remove("invalid");
+
+    getElm('eMail').value = '';
+
+    getElm('eMail').classList.remove("invalid");
+
+    getElm('eMail').value = '';
+
+    getElm('eMail').classList.remove("invalid");
+
+    getElm('password').value = '';
+
+    getElm('password').classList.remove("invalid");
+
+    getElm('timeZone').selectedIndex =0;
+
+    getElm('timeZone').classList.remove("invalid");
+
+    getElm('message').innerHTML = '';
+
+});
