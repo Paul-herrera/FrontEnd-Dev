@@ -106,6 +106,7 @@ if (isNaN(randomNumber)){
 	
 	//I dont know why this doesnt work???
 function myFunction() {
+    debugger;
     var element = document.getElementById("myDIV");
     element.classList.remove("mystyle");
 }
