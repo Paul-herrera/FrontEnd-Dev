@@ -1,0 +1,29 @@
+/*
+    Q1 - Write a media query for desktop first.  The break point needs to be at 960px;
+*/
+
+@media (min-width:960px){
+
+}
+
+/*
+    Q2 - Write a media query for mobile first.  The break point needs to be at 720px;
+*/
+
+@media (max-width:720px) {
+
+}
+
+/*
+    Q3 - What CSS property are you having the most trouble figuring out?
+*/
+
+I had trouble with flexbox and more recently CSS grid but after some practice and the use of google I think its fairly manageable.
+
+/*
+    Q4 - What is the best CSS property and why?
+*/
+
+(I hope this is just opinion based)
+I would say the best property is "display" due to its power. It can make elements function as "inline" or "block" regardless of their inherent display properties.
+Display sets up the ability to use "table", flex", and "grid" functions. Finally, display even removes all other properties via "initial".
